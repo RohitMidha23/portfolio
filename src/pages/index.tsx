@@ -1,29 +1,114 @@
 import Head from "next/head";
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsCodeSlash, BsCode } from "react-icons/bs";
+import { AiFillTwitterSquare, AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
+import { BiSun } from "react-icons/bi";
+import config from "../../portfolio.json";
+import { useState } from "react";
+import ExperienceCard from "@/components/Experience";
+import Projects from "@/components/Projects";
 
 export default function Home() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [codeOpen, setCodeOpen] = useState(true);
   return (
-    <>
-      <Head>
-        <title>Rohit Midha Portfolio</title>
-      </Head>
-      <main className="bg-white px-10">
-        <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl">developedbyro</h1>
-            <ul className="flex items-center">
-              <li>
-                <BsFillMoonStarsFill className="cursor-pointer text-l" />
-              </li>
-              <li>
-                <a href="" className="bg-gradient-to-r from-cyan-600 to-teal-600 px-4 py-2 ml-8 text-white rounded-xl">
-                  Resume
-                </a>
-              </li>
-            </ul>
+    <div className={darkMode ? "dark" : ""}>
+      <main className="bg-white dark:bg-black min-h-screen">
+        <section>
+          <nav className="py-5 flex justify-between">
+            <h1 className="text-xl font-mono px-10 dark:text-white">{config.name}</h1>
+            <div className="flex items-center px-10">
+              {darkMode ? (
+                <BiSun className="cursor-pointer text-xl dark:text-white" onClick={() => setDarkMode(false)} />
+              ) : (
+                <BsFillMoonStarsFill
+                  className="cursor-pointer text-lg dark:text-white"
+                  onClick={() => setDarkMode(true)}
+                />
+              )}
+            </div>
           </nav>
         </section>
+        <div className="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center ">
+          <section className="">
+            <div className="text-center p-3">
+              {codeOpen ? (
+                <BsCodeSlash
+                  className="cursor-pointer mx-auto text-9xl dark:text-white"
+                  onClick={() => setCodeOpen(false)}
+                />
+              ) : (
+                <BsCode className="cursor-pointer mx-auto text-9xl dark:text-white" onClick={() => setCodeOpen(true)} />
+              )}
+              <h1 className="text-5xl py-2 font-mono dark:text-white">{config.name}</h1>
+              <h3 className="text-2xl py-2 font-mono text-gray-700 dark:text-slate-300">{config.tagline}</h3>
+            </div>
+            <div className="flex justify-center text-3xl gap-16 py-1 text-gray-600 dark:text-slate-300">
+              {config.twitter ? (
+                <>
+                  <a href={config.twitter}>
+                    <AiFillTwitterSquare className="hover:text-[#00acee]" />
+                  </a>
+                </>
+              ) : null}
+              {config.linkedin ? (
+                <>
+                  <a href={config.linkedin}>
+                    <AiFillLinkedin className="hover:text-[#0A66C2]" />
+                  </a>
+                </>
+              ) : null}
+              {config.github ? (
+                <>
+                  <a href={config.github}>
+                    <AiFillGithub className="hover:text-[#171515] dark:hover:text-white" />
+                  </a>
+                </>
+              ) : null}
+            </div>
+          </section>
+          <section className="p-10">
+            {config.about ? (
+              <div className="px-10">
+                <h1 className="text-3xl py-2 font-mono dark:text-white">About</h1>
+                <p className="text-md py-2 font-mono text-gray-700 dark:text-slate-300">{config.about}</p>
+              </div>
+            ) : null}
+
+            {config.experience ? (
+              <div className="px-10 py-2">
+                <h1 className="text-3xl py-2 font-mono dark:text-white">Experience</h1>
+                <div className="grid grid-cols-1 gap-4">
+                  {config.experience.map((experience, index) => (
+                    <ExperienceCard key={index} {...experience} />
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {config.skills ? (
+              <div className="px-10 py-2">
+                <h1 className="text-3xl py-2 font-mono dark:text-white">Skills</h1>
+                <div className="overflow-auto flex">
+                  {config.skills.map((skill, index) => (
+                    <div className="text-5xl dark:text-white p-2">
+                      <i key={index} className={skill} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
+
+            {config.projects ? (
+              <div className="px-10 py-2">
+                <h1 className="text-3xl py-2 font-mono dark:text-white">Projects</h1>
+                <div className="">
+                  <Projects projects={config.projects} />
+                </div>
+              </div>
+            ) : null}
+          </section>
+        </div>
       </main>
-    </>
+    </div>
   );
 }

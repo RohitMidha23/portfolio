@@ -1,0 +1,48 @@
+{
+  "name": "rohit midha",
+  "tagline": "innovator coder philanthropist",
+  "twitter": "https://twitter.com/rohitmidha23",
+  "linkedin": "https://linkedin.com/in/rohitmidha",
+  "github": "https://github.com/RohitMidha23",
+  "about": "An innovator, passionate about Artificial Intelligence and it's applications. Currently engineering solutions for Goldman Sachs.",
+  "experience": [
+    {
+      "role": "Engineering Analyst",
+      "company": "Goldman Sachs",
+      "from": "Aug 2021",
+      "to": "Present"
+    },
+    {
+      "role": "Research Intern",
+      "company": "Indian Institute of Technology",
+      "from": "Nov 2020",
+      "to": "May 2020"
+    }
+  ],
+  "skills": [
+    "devicon-python-plain-wordmark",
+    "devicon-tailwindcss-original-wordmark",
+    "devicon-react-original-wordmark",
+    "devicon-pytorch-plain-wordmark",
+    "devicon-kubernetes-plain-wordmark",
+    "devicon-prometheus-original-wordmark",
+    "devicon-flask-original-wordmark",
+    "devicon-typescript-plain",
+    "devicon-mysql-plain-wordmark"
+  ],
+  "projects": [
+    {
+      "name": "Binarify",
+      "description": "Convery images to binary art!",
+      "imagePath": "",
+      "link": "https://github.com/RohitMidha23/Binarify"
+    },
+    {
+      "name": "pharmAssist by ThatMedicalCompany",
+      "description": "Empowering the visually impaired to manage their medication with ease!",
+      "imagePath": "",
+      "link": "bit.ly/PharmAssistDemo"
+    }
+  ],
+  "contact": "rohit.midha23@gmail.com"
+}
