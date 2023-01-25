@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdOpenInNew } from "react-icons/md";
 
 interface ProjectProps {
   name: string;
@@ -27,7 +28,7 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
   };
 
   return (
-    <div className="flex overflow-hidden">
+    <div className="flex overflow-hidden h-40 items-center">
       <button
         className="items-center left-0 m-4 text-3xl text-black rounded-full p-2  opacity-40 hover:opacity-70 dark:text-white"
         onClick={handlePrev}
@@ -36,13 +37,16 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
       </button>
       <div className="overflow-auto w-4/5 h-4/5 bg-white p-3 rounded-lg shadow-md dark:text-white dark:bg-black dark:shadow-white dark:shadow-sm">
         <div className="p-2">
-          <h3 className="text-lg font-mono mb-2">{projects[currentIndex].name}</h3>
-          <p className="font-mono text-gray-600">{projects[currentIndex].description}</p>
-          {projects[currentIndex].link && (
-            <a href={projects[currentIndex].link} className="text-blue-500" target="_blank" rel="noopener noreferrer">
-              Learn more
-            </a>
-          )}
+          <h3 className="text-lg font-mono mb-2 dark:text-white">{projects[currentIndex].name}</h3>
+          <p className="font-mono mb-2 text-gray-700 dark:text-slate-300">{projects[currentIndex].description}</p>
+          {projects[currentIndex].link ? (
+            <button className=" flex float-right py-2 px-4 rounded items-center border border-gray-200  text-blue-500">
+              <MdOpenInNew />
+              <a href={projects[currentIndex].link} className="px-2 text-blue-500" target="_blank">
+                Learn more
+              </a>
+            </button>
+          ) : null}
         </div>
       </div>
       <button

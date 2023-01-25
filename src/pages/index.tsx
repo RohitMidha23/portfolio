@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill, BsCodeSlash, BsCode } from "react-icons/bs";
-import { AiFillTwitterSquare, AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
+import { AiFillTwitterSquare, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { FiMail } from "react-icons/fi";
 import { BiSun } from "react-icons/bi";
 import config from "../../portfolio.json";
 import { useState } from "react";
@@ -65,8 +66,17 @@ export default function Home() {
                 </>
               ) : null}
             </div>
+            <div className="flex flex-col text-center p-3  items-center">
+              <h1 className="text-2xl py-2 font-mono dark:text-white">Collaborate?</h1>
+              <button className="flex  py-2 px-4 rounded items-center border border-gray-200  text-blue-500">
+                <FiMail />
+                <a href={"mailto:" + config.contact} className="px-2" target="_blank">
+                  Say Hi!
+                </a>
+              </button>
+            </div>
           </section>
-          <section className="p-10">
+          <section className="p-2">
             {config.about ? (
               <div className="px-10">
                 <h1 className="text-3xl py-2 font-mono dark:text-white">About</h1>
