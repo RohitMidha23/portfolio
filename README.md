@@ -1,38 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Developer Portfolio
 
-## Getting Started
+**[Check out Mine!]**(https://portfolio-rohitmidha23.vercel.app/)
 
-First, run the development server:
+This bad boy is designed to help you create a professional portfolio website that will make your competition quiver. With its sleek design and easy customization options, you'll have your portfolio up and running in no time.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Light Mode
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![alt text](light-mode.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Dark Mode
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+![alt text](./dark-mode.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [Developer Portfolio](#developer-portfolio)
+  - [Light Mode](#light-mode)
+  - [Dark Mode](#dark-mode)
+- [Developer Details](#developer-details)
+  - [Get your Hands Dirty](#get-your-hands-dirty)
+- [Support Me](#support-me)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Developer Details
 
-## Learn More
+The template is built using Next.js, a popular React framework for building web apps.
 
-To learn more about Next.js, take a look at the following resources:
+It can be easily deployed on Vercel, a powerful platform for hosting web apps.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+It uses tailwind-css so you have a portfolio that is fully responsive and optimized for all screen sizes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Get your Hands Dirty
 
-## Deploy on Vercel
+1. Fork or clone this repository.
+2. Run `npm install` to install the necessary dependencies.
+3. Edit the `portfolio.json` file to add your own information and projects.
+4. Start your local development server by running `npm run dev`.
+5. Deploy the template by connecting the app to Vercel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Support Me
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you :heart: it, :star: this repo.
+
+Help me translate this README into other languages. :smile:
+
+Check out my other work too either on [Github](http://bit.ly/2VMv9ZP) or on [my website](https://rohitmidha23.github.io).
+
+Enjoy!
