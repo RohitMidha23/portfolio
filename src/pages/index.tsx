@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { BsFillMoonStarsFill, BsCodeSlash, BsCode } from "react-icons/bs";
 import { AiFillTwitterSquare, AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { FiMail } from "react-icons/fi";
@@ -68,9 +67,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col text-center p-3  items-center">
               <h1 className="text-2xl py-2 font-mono dark:text-white">Collaborate?</h1>
-              <button className="flex  py-2 px-4 rounded items-center border border-gray-200  text-blue-500">
+              <button className="flex py-2 px-4 rounded items-center border border-gray-200  hover:bg-black hover:text-white text-black  dark:bg-white hover:dark:bg-black hover:dark:text-white">
                 <FiMail />
-                <a href={"mailto:" + config.contact} className="px-2" target="_blank">
+                <a href={"mailto:" + config.contact} className="font-mono px-2" target="_blank">
                   Say Hi!
                 </a>
               </button>

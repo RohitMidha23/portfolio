@@ -33,14 +33,12 @@
   "projects": [
     {
       "name": "Binarify",
-      "description": "Convery images to binary art!",
-      "imagePath": "",
+      "description": "Convert images to binary art!",
       "link": "https://github.com/RohitMidha23/Binarify"
     },
     {
       "name": "pharmAssist by ThatMedicalCompany",
       "description": "Empowering the visually impaired to manage their medication with ease!",
-      "imagePath": "",
       "link": "https://bit.ly/PharmAssistDemo"
     }
   ],
